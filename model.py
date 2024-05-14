@@ -1,8 +1,6 @@
 import os
-import time
 
 import openai
-import requests
 from dotenv import load_dotenv
 from groq import Groq
 
@@ -13,7 +11,7 @@ class Model:
     def __init__(self, api_key=None):
         self.tclient = openai.OpenAI(api_key="sk-proj-DdWGNSE2trdNX50otbUAT3BlbkFJr3UMbl7EfRQezGWcNTgH")
         self.gclient = Groq(api_key="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")
-        
+
     def transcribe(self, filename):
         audio = open(filename, "rb")
         transcription = self.tclient.audio.transcriptions.create(

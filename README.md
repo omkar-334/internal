@@ -26,6 +26,7 @@ pip install -r requirements.txt
 
 5. Add LAB name and TOPICS to `.env`.  
    This will give the LLM more context. This is optional.  
+   KEEP EMPTY IF you don't want. IT WILL INFLUENCE RESPONSES.
    Do NOT add any quotation marks.  
    example -  
    ```
