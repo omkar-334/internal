@@ -5,9 +5,7 @@ import wave
 import keyboard
 import pyaudio
 
-from model import ChatGPT, Gemma
-
-model = ChatGPT()
+from model import Model
 
 CHUNK = 1024
 FORMAT = pyaudio.paInt16
@@ -62,12 +60,11 @@ def record_audio():
 
 
 if __name__ == "__main__":
-    model = ChatGPT()
-    gemma = Gemma()
+    model = Model()
 
     audio = record_audio()
     text = model.transcribe(audio)
     print(text)
     print("--------------------------")
-    response = gemma.call_api(text)
+    response = model.generate(text)
     print(response)
