@@ -15,7 +15,7 @@ OUTPUT_FILENAME = "output.wav"
 
 def initialize():
     p = pyaudio.PyAudio()
-
+    INDEX = None
     for i in range(p.get_device_count()):
         dev = p.get_device_info_by_index(i)
         if "stereo" in dev["name"].lower():

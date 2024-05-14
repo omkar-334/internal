@@ -2,7 +2,7 @@
 
 0. Enable Audio Drivers  
 https://shankhanilborthakur.medium.com/recording-system-audio-in-windows-10-using-pyaudio-1559f3e1b64f  
-Follow Step 2  
+Follow Step 2 in the website
   
 1. Clone the repository or download as zip and extract it.  
   
