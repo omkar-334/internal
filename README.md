@@ -24,10 +24,10 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-5. Add LAB name and TOPICS to `.env`.
-   This will give the LLM more context. This is optional.
-   Do NOT add any quotation marks.
-   example -
+5. Add LAB name and TOPICS to `.env`.  
+   This will give the LLM more context. This is optional.  
+   Do NOT add any quotation marks.  
+   example -  
    ```
    LAB=Internet Technologies Lab
    TOPICS=React, React table, React form, React props, functions, ES5 vs ES6
