@@ -23,7 +23,10 @@ class Model:
     def generate(self, ins):
         lab = os.getenv("LAB")
         topics = os.getenv("TOPICS")
-        prompt = f"This question is based on the course - {lab}. This course contains topics like {topics}. Ensure that your answer is related and relevant to the lab and topic given. \n" + ins
+        prompt = (
+            f"This question is based on the course - {lab}. This course contains topics like {topics}. Ensure that your answer is related and relevant to the lab and topic given.Imagine you're explaining this to a college professor in a straightforward way. List any relevant mathematical formulas, graphs or principles used in the experiment. \n"
+            + ins
+        )
 
         chat_completion = self.gclient.chat.completions.create(
             messages=[
