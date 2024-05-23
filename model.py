@@ -5,12 +5,13 @@ from dotenv import load_dotenv
 from groq import Groq
 
 load_dotenv()
-
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+GROQ_API_KEY = os.getenv('GROQ_API_KEY')
 
 class Model:
     def __init__(self, api_key=None):
-        self.tclient = openai.OpenAI(api_key="sk-proj-DdWGNSE2trdNX50otbUAT3BlbkFJr3UMbl7EfRQezGWcNTgH")
-        self.gclient = Groq(api_key="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")
+        self.tclient = openai.OpenAI(api_key=OPENAI_API_KEY)
+        self.gclient = Groq(api_key=GROQ_API_KEY)
 
     def transcribe(self, filename):
         audio = open(filename, "rb")
